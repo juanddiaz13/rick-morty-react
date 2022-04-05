@@ -1,5 +1,6 @@
 import { waitForElementToBeRemoved } from '@testing-library/react';
 import React, { useEffect, useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Card } from './Card';
 const API_RICK_MORTY = 'https://rickandmortyapi.com/api/character';
 //import './Card.scss';
@@ -23,6 +24,7 @@ export const Gallery = (props) => {
 
   const { title, url, description } = props;
   return (
+    <div className="gallery">
     <div className='gallery-container'>
         {characters.map((elm, index) => (
           <Card
@@ -33,6 +35,7 @@ export const Gallery = (props) => {
           status={elm.status}
         ></Card>
         ))}
+      </div>
       </div>
   );
 };

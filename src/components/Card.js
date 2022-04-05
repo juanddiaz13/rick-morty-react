@@ -1,5 +1,6 @@
 import React from 'react';
 import './Card.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export const Card = (props) => {
   const { name, image, gender, status } = props;
