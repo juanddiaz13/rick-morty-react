@@ -2,12 +2,14 @@ import React from 'react';
 import './Card.scss';
 
 export const Card = (props) => {
-  const { title, url, description } = props;
+  const { name, image, gender, status } = props;
   return (
-    <div className='card'>
-      <img className='card-img' src={url} alt={title} />
-      <h3>{title}</h3>
-      <p>{description}</p>
+    <div className='card col-2'>
+      <img className='card-img' src={image} alt={name} />
+      <h3 class="card-title">{name}</h3>
+      <p>Gender: {gender}</p>
+      <p>Status: {status}</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   );
 };
